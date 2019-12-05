@@ -25,7 +25,12 @@ export default class SendMessageForm extends Component {
         return (
             <>
             <form className="send-message-form" onSubmit={this.handleSubmit}>
-                <input placeholder="Send Message" type="text" onChange={this.handleChange} value={this.state.message}/>
+                <input 
+                    placeholder="Send Message"
+                    disabled={this.props.disabled} 
+                    type="text" 
+                    onChange={this.handleChange} 
+                    value={this.state.message}  />
             </form>
             </>
         )
